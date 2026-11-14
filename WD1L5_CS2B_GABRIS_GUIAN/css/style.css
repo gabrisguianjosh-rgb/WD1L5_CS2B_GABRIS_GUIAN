@@ -1,0 +1,375 @@
+
+/* =========================================
+   GUIAN JOSH GABRIS - STUDENT PORTFOLIO
+   Custom External CSS
+========================================= */
+
+/* Main colors */
+:root {
+    --background: #0c1220;
+    --surface: #141e30;
+    --surface-light: #1a2940;
+    --text: #edf3f8;
+    --muted: #a7b4c5;
+    --accent: #63d6e5;
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+/* Navigation */
+.navbar {
+    background: rgba(12, 18, 32, 0.95);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    letter-spacing: 2px;
+}
+
+.navbar-brand span,
+.section-heading h2 span,
+.hero-section h1 span,
+.footer span {
+    color: var(--accent);
+}
+
+.nav-link {
+    color: var(--muted) !important;
+    margin-left: 12px;
+}
+
+.nav-link:hover {
+    color: var(--accent) !important;
+}
+
+/* Hero section */
+.hero-section {
+    background: radial-gradient(circle at 85% 25%, #1b3650 0, transparent 32%), var(--background);
+}
+
+.small-label {
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero-section h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 12px 0;
+}
+
+.hero-subtitle {
+    color: #d4deea;
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+}
+
+.hero-text {
+    max-width: 570px;
+    color: var(--muted);
+    margin-bottom: 28px;
+}
+
+.btn-cyan {
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    color: #10202a;
+    font-weight: bold;
+    padding: 11px 22px;
+    border-radius: 8px;
+}
+
+.btn-cyan:hover {
+    background: #8ce7ef;
+    border-color: #8ce7ef;
+    color: #10202a;
+}
+
+.btn-outline-light {
+    padding: 11px 22px;
+    border-radius: 8px;
+}
+
+/* Profile photo */
+.profile-frame {
+    width: 280px;
+    height: 280px;
+    margin: auto;
+    padding: 9px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 35px rgba(99, 214, 229, 0.12);
+    overflow: hidden;
+}
+
+.profile-photo,
+.about-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.photo-placeholder {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--surface-light);
+    color: var(--accent);
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.motto {
+    color: var(--muted);
+    font-style: italic;
+    margin: 22px auto 0;
+    max-width: 330px;
+}
+
+/* General sections */
+.section-padding {
+    padding: 95px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.section-heading h2 {
+    font-size: 2.7rem;
+    font-weight: 800;
+    margin: 8px 0;
+}
+
+.section-description {
+    color: var(--muted);
+    margin: 10px auto 0;
+}
+
+/* About section */
+.about-photo-wrap {
+    width: 230px;
+    height: 230px;
+    margin: auto;
+    padding: 8px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+}
+
+.about-placeholder {
+    font-size: 3rem;
+}
+
+.content-card,
+.project-card,
+.contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.content-card {
+    padding: 30px;
+}
+
+.content-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+}
+
+.content-card p {
+    color: var(--muted);
+}
+
+/* Skills */
+.skill-tags,
+.project-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tags span,
+.project-tools span {
+    background: rgba(99, 214, 229, 0.1);
+    color: var(--accent);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Philosophy */
+.philosophy-section,
+.contact-section {
+    background: #101a2a;
+}
+
+.philosophy-card {
+    max-width: 850px;
+    margin: auto;
+    border-left: 4px solid var(--accent);
+}
+
+/* Projects - Text cards only, no photos */
+.project-card {
+    padding: 26px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(99, 214, 229, 0.55);
+}
+
+.project-number {
+    color: var(--accent);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.project-type {
+    color: var(--accent);
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.project-card p:not(.project-type) {
+    color: var(--muted);
+    font-size: 0.94rem;
+}
+
+.project-link {
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 22px;
+}
+
+.project-link:hover {
+    color: #a1f1f5;
+}
+
+.github-note {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 22px;
+}
+
+/* Contact */
+.contact-card {
+    max-width: 650px;
+    padding: 30px;
+}
+
+.form-label {
+    color: var(--text);
+}
+
+.form-control {
+    background: #0e1726;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 11px 13px;
+}
+
+.form-control:focus {
+    background: #0e1726;
+    color: var(--text);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.2rem rgba(99, 214, 229, 0.12);
+}
+
+.form-control::placeholder {
+    color: #718096;
+}
+
+.form-message {
+    color: var(--accent);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 22px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+    margin-top: 25px;
+    padding-top: 20px;
+}
+
+/* Footer */
+.footer {
+    padding: 25px 0;
+    background: #090e18;
+    color: var(--muted);
+}
+
+.footer small {
+    font-size: 0.78rem;
+}
+
+/* Mobile responsive design */
+@media (max-width: 767px) {
+    .section-padding {
+        padding: 70px 0;
+    }
+
+    .hero-section {
+        padding-top: 85px;
+        padding-bottom: 55px;
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile-frame {
+        width: 230px;
+        height: 230px;
+    }
+
+    .content-card,
+    .contact-card {
+        padding: 22px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+    }
+}
